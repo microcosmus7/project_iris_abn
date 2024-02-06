@@ -1,7 +1,10 @@
 library(dplyr)
 library(ggplot2)
+library(readr)
 
-blah blaa
+# reading data
+iris_data <- read_csv('raw_data/iris.csv')
 
-
-iris_data <- iris
+# subsetting data
+setosa_subset <- iris_data |>
+  filter(Species == "setosa")
