@@ -9,7 +9,11 @@ iris_data <- read_csv('raw_data/iris.csv')
 setosa_subset <- iris_data |>
   filter(Species == "setosa")
 
-AAAAHHHHHHHHHHHH
+# cool analysis
+model_setosa <- lm(Sepal.Length ~ Petal.Length, data = setosa_subset)
 
-
-lsañfsjlgqeroigje
+# plotting
+setosa_plot <- ggplot(setosa_subset, aes(x = Petal.Length, y = Sepal.Length)) +
+  geom_point(aes(size = Petal.Width)) +
+  stat_smooth(method = "lm") +
+  theme_bw()
