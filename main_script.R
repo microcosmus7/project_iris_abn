@@ -9,7 +9,5 @@ iris_data <- read_csv('raw_data/iris.csv')
 setosa_subset <- iris_data |>
   filter(Species == "setosa")
 
-AAAAHHHHHHHHHHHH
-
-
-lsañfsjlgqeroigje
+# cool analysis
+model_setosa <- lm(Sepal.Length ~ Petal.Length, data = setosa_subset)
